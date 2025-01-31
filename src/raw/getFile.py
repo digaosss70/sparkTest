@@ -8,7 +8,7 @@ def download_file(days_to_download):
 
         date_to_download = (datetime.now() - timedelta(days=day) ).strftime('%Y%m%d')
         url = f"https://www4.bcb.gov.br/Download/fechamento/{date_to_download}.csv"
-        save_path = f"./data/raw/{date_to_download}.csv"
+        save_path = f"../data/raw/{date_to_download}.csv"
 
         response = requests.get(url)
         
